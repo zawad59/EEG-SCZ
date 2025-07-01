@@ -8,8 +8,8 @@ import warnings
 # === Configuration ===
 BASE_DIR = r"Z:\EEG Data"  # Update path as needed
 SFREQ = 1000               # Hz
-MAX_FREQ = 500             # Hz
-TARGET_PSD_BINS = 129      # Standardized length of PSD
+MAX_FREQ = 1000/2             # Nyquist Theorem
+TARGET_PSD_BINS = 129      #Randomly assigned based on segment length (nperseg) of Welch method.
 PSD_SAVE_PATH = os.path.join(BASE_DIR, "avg_psd.npy")
 LOG_FILE = os.path.join(BASE_DIR, "processed_subjects.txt")
 
